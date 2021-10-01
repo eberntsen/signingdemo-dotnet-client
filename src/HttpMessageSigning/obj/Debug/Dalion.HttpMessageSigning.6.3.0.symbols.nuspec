@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Dalion.HttpMessageSigning</id>
+    <version>6.3.0</version>
+    <title>Dalion.HttpMessageSigning</title>
+    <authors>David Lievrouw</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>dalion128.png</icon>
+    <projectUrl>https://github.com/DavidLievrouw/HttpMessageSigning</projectUrl>
+    <iconUrl>https://dalion.eu/dalion128.png</iconUrl>
+    <description>Core library of the Dalion HttpMessageSigning C# implementation of the IETF Internet-Draft "Signing HTTP Messages".</description>
+    <copyright>Copyright (c) 2021, David Lievrouw</copyright>
+    <tags>signing http messages ietf signatures lievrouw dalion</tags>
+    <repository type="git" url="https://github.com/DavidLievrouw/HttpMessageSigning" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2">
+        <dependency id="Microsoft.Extensions.ObjectPool" version="3.1.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Primitives" version="3.1.2" exclude="Build,Analyzers" />
+        <dependency id="System.Net.Http" version="4.3.4" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="Microsoft.Extensions.ObjectPool" version="[2.1.6, 2.2.0)" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Primitives" version="[2.1.6, 2.2.0)" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Microsoft.Extensions.ObjectPool" version="3.1.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Primitives" version="3.1.2" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net5.0">
+        <dependency id="Microsoft.Extensions.ObjectPool" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Primitives" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.Extensions.ObjectPool" version="3.1.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Primitives" version="3.1.2" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Microsoft.Extensions.ObjectPool" version="3.1.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Primitives" version="3.1.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/bin/Debug/net472/Dalion.HttpMessageSigning.pdb" target="lib/net472/Dalion.HttpMessageSigning.pdb" />
+    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/bin/Debug/net5/Dalion.HttpMessageSigning.pdb" target="lib/net5.0/Dalion.HttpMessageSigning.pdb" />
+    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/bin/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.pdb" target="lib/netcoreapp2.1/Dalion.HttpMessageSigning.pdb" />
+    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/bin/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.pdb" target="lib/netcoreapp3.1/Dalion.HttpMessageSigning.pdb" />
+    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/bin/Debug/netstandard2.0/Dalion.HttpMessageSigning.pdb" target="lib/netstandard2.0/Dalion.HttpMessageSigning.pdb" />
+    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/bin/Debug/netstandard2.1/Dalion.HttpMessageSigning.pdb" target="lib/netstandard2.1/Dalion.HttpMessageSigning.pdb" />
+  </files>
+</package>

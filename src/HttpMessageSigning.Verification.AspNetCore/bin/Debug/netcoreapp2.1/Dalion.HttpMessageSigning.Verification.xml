@@ -1,0 +1,828 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dalion.HttpMessageSigning.Verification</name>
+    </assembly>
+    <members>
+        <member name="T:Dalion.HttpMessageSigning.Verification.Client">
+            <summary>
+                Represents an entry in the list of known clients, that the server maintains.
+            </summary>
+        </member>
+        <member name="F:Dalion.HttpMessageSigning.Verification.Client.DefaultNonceLifetime">
+            <summary>
+                Represents the default time span after which repeated nonce values are allowed again.
+            </summary>
+        </member>
+        <member name="F:Dalion.HttpMessageSigning.Verification.Client.DefaultClockSkew">
+            <summary>
+                Represents the default clock skew to allow when validation a time.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.#ctor(Dalion.HttpMessageSigning.KeyId,System.String,Dalion.HttpMessageSigning.ISignatureAlgorithm,System.Security.Claims.Claim[])">
+            <summary>
+                Create a new instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> class.
+            </summary>
+            <param name="id">The identity of the client that can be looked up by the server.</param>
+            <param name="name">The descriptive name of the client</param>
+            <param name="signatureAlgorithm">The <see cref="T:Dalion.HttpMessageSigning.ISignatureAlgorithm" /> that is used to verify the signature.</param>
+            <param name="claims">The additional claims that the validated principal will have upon successful signature verification.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.#ctor(Dalion.HttpMessageSigning.KeyId,System.String,Dalion.HttpMessageSigning.ISignatureAlgorithm,System.TimeSpan,System.Security.Claims.Claim[])">
+            <summary>
+                Create a new instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> class.
+            </summary>
+            <param name="id">The identity of the client that can be looked up by the server.</param>
+            <param name="name">The descriptive name of the client</param>
+            <param name="signatureAlgorithm">The <see cref="T:Dalion.HttpMessageSigning.ISignatureAlgorithm" /> that is used to verify the signature.</param>
+            <param name="nonceLifetime">The time span after which repeated nonce values are allowed again.</param>
+            <param name="claims">The additional claims that the validated principal will have upon successful signature verification.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.#ctor(Dalion.HttpMessageSigning.KeyId,System.String,Dalion.HttpMessageSigning.ISignatureAlgorithm,System.TimeSpan,System.TimeSpan,System.Security.Claims.Claim[])">
+            <summary>
+                Create a new instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> class.
+            </summary>
+            <param name="id">The identity of the client that can be looked up by the server.</param>
+            <param name="name">The descriptive name of the client</param>
+            <param name="signatureAlgorithm">The <see cref="T:Dalion.HttpMessageSigning.ISignatureAlgorithm" /> that is used to verify the signature.</param>
+            <param name="nonceLifetime">The time span after which repeated nonce values are allowed again.</param>
+            <param name="clockSkew">The clock skew to allow when validation a time.</param>
+            <param name="claims">The additional claims that the validated principal will have upon successful signature verification.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.#ctor(Dalion.HttpMessageSigning.KeyId,System.String,Dalion.HttpMessageSigning.ISignatureAlgorithm,System.TimeSpan,System.TimeSpan,Dalion.HttpMessageSigning.RequestTargetEscaping,System.Security.Claims.Claim[])">
+            <summary>
+                Create a new instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> class.
+            </summary>
+            <param name="id">The identity of the client that can be looked up by the server.</param>
+            <param name="name">The descriptive name of the client</param>
+            <param name="signatureAlgorithm">The <see cref="T:Dalion.HttpMessageSigning.ISignatureAlgorithm" /> that is used to verify the signature.</param>
+            <param name="nonceLifetime">The time span after which repeated nonce values are allowed again.</param>
+            <param name="clockSkew">The clock skew to allow when validation a time.</param>
+            <param name="claims">The additional claims that the validated principal will have upon successful signature verification.</param>
+            <param name="requestTargetEscaping">The method of escaping the value of the (request-target) pseudo-header.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.#ctor(Dalion.HttpMessageSigning.KeyId,System.String,Dalion.HttpMessageSigning.ISignatureAlgorithm,Dalion.HttpMessageSigning.Verification.ClientOptions)">
+            <summary>
+                Create a new instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> class.
+            </summary>
+            <param name="id">The identity of the client that can be looked up by the server.</param>
+            <param name="name">The descriptive name of the client</param>
+            <param name="signatureAlgorithm">The <see cref="T:Dalion.HttpMessageSigning.ISignatureAlgorithm" /> that is used to verify the signature.</param>
+            <param name="options">The options to apply during creation of the new <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> instance.</param>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.Client.Id">
+            <summary>
+                Gets the identity of the client that can be looked up by the server.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.Client.Name">
+            <summary>
+                Gets the descriptive name of the client.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.Client.SignatureAlgorithm">
+            <summary>
+                Gets the <see cref="T:Dalion.HttpMessageSigning.ISignatureAlgorithm" /> that is used to verify the signature.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.Client.NonceLifetime">
+            <summary>
+                Gets the time span after which repeated nonce values are allowed again.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.Client.ClockSkew">
+            <summary>
+                Gets the clock skew to allow when validation a time.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.Client.RequestTargetEscaping">
+            <summary>
+                Gets the method of escaping the value of the (request-target) pseudo-header.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.Client.Claims">
+            <summary>
+                Gets the additional claims that the validated principal will have upon successful signature verification.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.Clone">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.Equals(Dalion.HttpMessageSigning.Verification.Client)">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.Create(Dalion.HttpMessageSigning.KeyId,System.String,Dalion.HttpMessageSigning.ISignatureAlgorithm,System.Action{Dalion.HttpMessageSigning.Verification.ClientOptions})">
+            <summary>
+                Create a new instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> class, with the specified options.
+            </summary>
+            <param name="id">The identity of the client that can be looked up by the server.</param>
+            <param name="name">The descriptive name of the client.</param>
+            <param name="signatureAlgorithm">The <see cref="T:Dalion.HttpMessageSigning.ISignatureAlgorithm" /> that is used to verify the signature.</param>
+            <param name="configure">A delegate that allows configuring additional options for the new instance. Pass <see langword="null" /> to use the default options.</param>
+            <returns>The newly created <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> instance.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.Create(Dalion.HttpMessageSigning.KeyId,System.String,System.String,System.Security.Cryptography.HashAlgorithmName,System.Action{Dalion.HttpMessageSigning.Verification.ClientOptions})">
+            <summary>
+                Create a new instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> class, with the specified options.
+            </summary>
+            <param name="id">The identity of the client that can be looked up by the server.</param>
+            <param name="name">The descriptive name of the client.</param>
+            <param name="hmacSecret">The shared secret for the HMAC algorithm.</param>
+            <param name="hashAlgorithm">The name of the hash algorithm to use. Pass <see langword="default" /> to use the default.</param>
+            <param name="configure">A delegate that allows configuring additional options for the new instance. Pass <see langword="null" /> to use the default options.</param>
+            <returns>The newly created <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> instance.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.Create(Dalion.HttpMessageSigning.KeyId,System.String,System.Security.Cryptography.RSAParameters,System.Security.Cryptography.HashAlgorithmName,System.Action{Dalion.HttpMessageSigning.Verification.ClientOptions})">
+            <summary>
+                Create a new instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> class, with the specified options.
+            </summary>
+            <param name="id">The identity of the client that can be looked up by the server.</param>
+            <param name="name">The descriptive name of the client.</param>
+            <param name="publicParameters">The public RSA algorithm parameters to use.</param>
+            <param name="hashAlgorithm">The name of the hash algorithm to use. Pass <see langword="default" /> to use the default.</param>
+            <param name="configure">A delegate that allows configuring additional options for the new instance. Pass <see langword="null" /> to use the default options.</param>
+            <returns>The newly created <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> instance.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Client.Create(Dalion.HttpMessageSigning.KeyId,System.String,System.Security.Cryptography.ECParameters,System.Security.Cryptography.HashAlgorithmName,System.Action{Dalion.HttpMessageSigning.Verification.ClientOptions})">
+            <summary>
+                Create a new instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> class, with the specified options.
+            </summary>
+            <param name="id">The identity of the client that can be looked up by the server.</param>
+            <param name="name">The descriptive name of the client.</param>
+            <param name="publicParameters">The public ECDsa algorithm parameters to use.</param>
+            <param name="hashAlgorithm">The name of the hash algorithm to use. Pass <see langword="default" /> to use the default.</param>
+            <param name="configure">A delegate that allows configuring additional options for the new instance. Pass <see langword="null" /> to use the default options.</param>
+            <returns>The newly created <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> instance.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.ClientOptions">
+            <summary>
+                Represents options for the creation of <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> instances.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.ClientOptions.Default">
+            <summary>
+                Gets an instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.ClientOptions" /> class, with the default property values.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.ClientOptions.NonceLifetime">
+            <summary>
+                Gets or sets the time span after which repeated nonce values are allowed again.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.ClientOptions.NonceExpiration">
+            <summary>
+                Gets or sets the time span after which repeated nonce values are allowed again.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.ClientOptions.ClockSkew">
+            <summary>
+                Gets or sets the clock skew to allow when validation a time.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.ClientOptions.RequestTargetEscaping">
+            <summary>
+                Gets or sets the method of escaping the value of the (request-target) pseudo-header.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.ClientOptions.Claims">
+            <summary>
+                Gets or sets the additional claims that the validated principal will have upon successful signature verification.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.ClientOptions.Validate">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.ClientOptions.GetValidationErrors">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.Extensions">
+            <summary>
+                Extension methods for this library.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Extensions.FromXml(System.Security.Cryptography.ECDsa,System.String)">
+            <summary>
+                Load the public key parameters in the specified <see cref="T:System.Security.Cryptography.ECDsa" />, defined by the specified XML string.
+            </summary>
+            <param name="ecdsa">The <see cref="T:System.Security.Cryptography.ECDsa" /> to load the parameters in.</param>
+            <param name="xmlString">The XML string that describes the public key parameters.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Extensions.ToXml(System.Security.Cryptography.ECParameters)">
+            <summary>
+                Serialize the specified <see cref="T:System.Security.Cryptography.ECParameters" /> to an XML string.
+            </summary>
+            <param name="parameters">The <see cref="T:System.Security.Cryptography.ECParameters" /> to serialize.</param>
+            <returns>An XML string that represents the specified <see cref="T:System.Security.Cryptography.ECParameters" />.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Extensions.AddHttpMessageSignatureVerification(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>Adds <see cref="T:Dalion.HttpMessageSigning.Verification.ISignatureVerifier"/> registrations to the specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the registrations to.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to configure the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Extensions.FromXml(System.Security.Cryptography.RSA,System.String)">
+            <summary>
+                Load the public key parameters in the specified <see cref="T:System.Security.Cryptography.RSA" />, defined by the specified XML string.
+            </summary>
+            <param name="rsa">The <see cref="T:System.Security.Cryptography.RSA" /> to load the parameters in.</param>
+            <param name="xmlString">The XML string that describes the public key parameters.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Extensions.ToXml(System.Security.Cryptography.RSAParameters)">
+            <summary>
+                Serialize the specified <see cref="T:System.Security.Cryptography.RSAParameters" /> to an XML string.
+            </summary>
+            <param name="parameters">The <see cref="T:System.Security.Cryptography.RSAParameters" /> to serialize.</param>
+            <returns>An XML string that represents the specified <see cref="T:System.Security.Cryptography.RSAParameters" />.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.HeaderMissingSignatureVerificationFailure">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.HeaderMissingSignatureVerificationFailure.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.HttpRequestForVerification">
+            <summary>
+                A representation of a HTTP request message, that contains the data required for signature verification.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.HttpRequestForVerification.Method">
+            <summary>
+                Gets or sets the HTTP method of the request.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.HttpRequestForVerification.RequestUri">
+            <summary>
+                Gets or sets the target URI of the request.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.HttpRequestForVerification.Headers">
+            <summary>
+                Gets or sets the headers of the request.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.HttpRequestForVerification.Body">
+            <summary>
+                Gets or sets the binary representation of the body of the request.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.HttpRequestForVerification.Signature">
+            <summary>
+                Gets or sets the parsed signature of the request.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.HttpRequestForVerification.Clone">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.ICachingClientStoreDecorator">
+            <summary>
+                Represents an object that decorates a <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore" /> with a caching layer.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.ICachingClientStoreDecorator.DecorateWithCaching(Dalion.HttpMessageSigning.Verification.IClientStore,System.TimeSpan)">
+            <summary>
+                Decorate the specified <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore" /> with a caching layer.
+            </summary>
+            <param name="decorated">The <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore" /> to decorate.</param>
+            <param name="cacheExpiration">The expiration time of cache entries.</param>
+            <returns>The decorated <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore" />.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.ICachingNonceStoreDecorator">
+            <summary>
+                Represents an object that decorates a <see cref="T:Dalion.HttpMessageSigning.Verification.INonceStore" /> with a caching layer.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.ICachingNonceStoreDecorator.DecorateWithCaching(Dalion.HttpMessageSigning.Verification.INonceStore)">
+            <summary>
+                Decorate the specified <see cref="T:Dalion.HttpMessageSigning.Verification.INonceStore" /> with a caching layer.
+            </summary>
+            <param name="decorated">The <see cref="T:Dalion.HttpMessageSigning.Verification.INonceStore" /> to decorate.</param>
+            <returns>The decorated <see cref="T:Dalion.HttpMessageSigning.Verification.INonceStore" />.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.IClaimsPrincipalFactory">
+            <summary>
+                Represents an object that creates authenticated principal, after successful signature verification.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IClaimsPrincipalFactory.CreateForClient(Dalion.HttpMessageSigning.Verification.Client)">
+            <summary>
+                Create an authenticated principal, using the settings of the specified <see cref="T:Dalion.HttpMessageSigning.Verification.Client" />.
+            </summary>
+            <param name="client">The <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> whose settings were used to verify the signature.</param>
+            <returns>An authenticated <see cref="T:System.Security.Claims.ClaimsPrincipal" />.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.IClientStore">
+            <summary>
+            Represents a store that the server can query to obtain client-specific settings for request signature verification.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IClientStore.Register(Dalion.HttpMessageSigning.Verification.Client)">
+            <summary>
+            Registers a <see cref="T:Dalion.HttpMessageSigning.Verification.Client"/>, and its settings to perform <see cref="T:Dalion.HttpMessageSigning.Signature"/> verification.
+            </summary>
+            <param name="client">The entry that represents a known client.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IClientStore.Get(Dalion.HttpMessageSigning.KeyId)">
+            <summary>
+            Gets the registered <see cref="T:Dalion.HttpMessageSigning.Verification.Client"/> that corresponds to the specified identifier.
+            </summary>
+            <param name="clientId">The identifier of the registered client to get.</param>
+            <returns>The registered client that corresponds to the specified identifier.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder">
+            <summary>
+                A builder for configuring HTTP message signature verification.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder.Services">
+            <summary>
+                Gets the application service collection.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder.UseClient(Dalion.HttpMessageSigning.Verification.Client)">
+            <summary>Register a <see cref="T:Dalion.HttpMessageSigning.Verification.Client"/> in the <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore"/>.</summary>
+            <param name="client">The <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> to register.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder.UseClient(System.Func{System.IServiceProvider,Dalion.HttpMessageSigning.Verification.Client})">
+            <summary>Register a <see cref="T:Dalion.HttpMessageSigning.Verification.Client"/> in the <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore"/>.</summary>
+            <param name="clientFactory">The factory that creates the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> to register.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder.UseClientStore``1">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore"/>.</summary>
+            <typeparam name="TClientStore">The type of the <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore" /> that is to be used.</typeparam>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder.UseClientStore(Dalion.HttpMessageSigning.Verification.IClientStore)">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore"/>.</summary>
+            <param name="clientStore">The <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore" /> that is to be used.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder.UseClientStore(System.Func{System.IServiceProvider,Dalion.HttpMessageSigning.Verification.IClientStore})">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore"/>.</summary>
+            <param name="clientStoreFactory">The factory that creates the <see cref="T:Dalion.HttpMessageSigning.Verification.IClientStore" /> that is to be used.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder.UseClaimsPrincipalFactory``1">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.IClaimsPrincipalFactory"/>.</summary>
+            <typeparam name="TClaimsPrincipalFactory">The type of the <see cref="T:Dalion.HttpMessageSigning.Verification.IClaimsPrincipalFactory" /> that is to be used.</typeparam>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder.UseClaimsPrincipalFactory(Dalion.HttpMessageSigning.Verification.IClaimsPrincipalFactory)">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.IClaimsPrincipalFactory"/>.</summary>
+            <param name="claimsPrincipalFactory">The <see cref="T:Dalion.HttpMessageSigning.Verification.IClaimsPrincipalFactory" /> that is to be used.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder.UseClaimsPrincipalFactory(System.Func{System.IServiceProvider,Dalion.HttpMessageSigning.Verification.IClaimsPrincipalFactory})">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.IClaimsPrincipalFactory"/>.</summary>
+            <param name="claimsPrincipalFactory">The factory that creates the <see cref="T:Dalion.HttpMessageSigning.Verification.IClaimsPrincipalFactory" /> that is to be used.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.InMemoryClientStore">
+            <summary>
+                Represents an in-memory store that the server can query to obtain client-specific settings for request signature verification.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InMemoryClientStore.#ctor">
+            <summary>
+                Create a new empty instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.InMemoryClientStore" /> class.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InMemoryClientStore.#ctor(Dalion.HttpMessageSigning.Verification.Client[])">
+            <summary>
+                Create a new instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.InMemoryClientStore" /> class, containing the specified <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> instances.
+            </summary>
+            <param name="clients">The <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> instances to register.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InMemoryClientStore.Register(Dalion.HttpMessageSigning.Verification.Client)">
+            <summary>
+                Registers a <see cref="T:Dalion.HttpMessageSigning.Verification.Client" />, and its settings to perform <see cref="T:Dalion.HttpMessageSigning.Signature" /> verification.
+            </summary>
+            <param name="client">The entry that represents a known client.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InMemoryClientStore.Get(Dalion.HttpMessageSigning.KeyId)">
+            <summary>
+                Gets the registered <see cref="T:Dalion.HttpMessageSigning.Verification.Client" /> that corresponds to the specified identifier.
+            </summary>
+            <param name="clientId">The identifier of the registered client to get.</param>
+            <returns>The registered client that corresponds to the specified identifier.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InMemoryClientStore.Dispose">
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.InMemoryNonceStore">
+            <summary>
+                Represents a <see cref="T:Dalion.HttpMessageSigning.Verification.INonceStore" /> implementation that stores clients in memory.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InMemoryNonceStore.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+                Create a new empty instance of the <see cref="T:Dalion.HttpMessageSigning.Verification.InMemoryNonceStore" /> class.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InMemoryNonceStore.Dispose">
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InMemoryNonceStore.Register(Dalion.HttpMessageSigning.Verification.Nonce)">
+            <summary>
+                Registers usage of the specified <see cref="T:Dalion.HttpMessageSigning.Verification.Nonce" /> value.
+            </summary>
+            <param name="nonce">The <see cref="T:Dalion.HttpMessageSigning.Verification.Nonce" /> that is received from a client.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InMemoryNonceStore.Get(Dalion.HttpMessageSigning.KeyId,System.String)">
+            <summary>
+                Gets the <see cref="T:Dalion.HttpMessageSigning.Verification.Nonce" /> value with a matching string, that was previously sent by the <see cref="T:Dalion.HttpMessageSigning.Verification.Client" />,
+                identified by the specified <see cref="T:Dalion.HttpMessageSigning.KeyId" />.
+            </summary>
+            <param name="clientId">The identifier of the client to get the value for.</param>
+            <param name="nonceValue">The nonce string value that was sent.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.INonceStore">
+            <summary>
+            Represents a store that the server can use to check nonce validity, avoiding replay attacks.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.INonceStore.Register(Dalion.HttpMessageSigning.Verification.Nonce)">
+            <summary>
+            Registers usage of the specified <see cref="T:Dalion.HttpMessageSigning.Verification.Nonce"/> value.
+            </summary>
+            <param name="nonce">The <see cref="T:Dalion.HttpMessageSigning.Verification.Nonce"/> that is received from a client.</param>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.INonceStore.Get(Dalion.HttpMessageSigning.KeyId,System.String)">
+            <summary>
+            Gets the <see cref="T:Dalion.HttpMessageSigning.Verification.Nonce"/> value with a matching string, that was previously sent by the <see cref="T:Dalion.HttpMessageSigning.Verification.Client"/>, identified by the specified <see cref="T:Dalion.HttpMessageSigning.KeyId"/>. 
+            </summary>
+            <param name="clientId">The identifier of the client to get the value for.</param>
+            <param name="nonceValue">The nonce string value that was sent.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.InvalidClientSignatureVerificationFailure">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InvalidClientSignatureVerificationFailure.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.InvalidCreatedHeaderSignatureVerificationFailure">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InvalidCreatedHeaderSignatureVerificationFailure.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.InvalidDigestHeaderSignatureVerificationFailure">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InvalidDigestHeaderSignatureVerificationFailure.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.InvalidExpiresHeaderSignatureVerificationFailure">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InvalidExpiresHeaderSignatureVerificationFailure.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.InvalidSignatureAlgorithmSignatureVerificationFailure">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InvalidSignatureAlgorithmSignatureVerificationFailure.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.InvalidSignatureSignatureVerificationFailure">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InvalidSignatureSignatureVerificationFailure.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.InvalidSignatureStringSignatureVerificationFailure">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.InvalidSignatureStringSignatureVerificationFailure.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.IRequestSignatureVerificationOrchestrator">
+            <summary>
+                Represents a service that orchestrates tasks for verifying a request signature.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.IRequestSignatureVerificationOrchestrator.VerifySignature(Dalion.HttpMessageSigning.Verification.HttpRequestForVerification)">
+            <summary>
+                Verify the signature of the specified request.
+            </summary>
+            <param name="request">The request and its signature to verify.</param>
+            <returns>The result of the verification, success or failure.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.Nonce">
+            <summary>
+                Represents a value that the server can use to check nonce validity.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.Nonce.#ctor(Dalion.HttpMessageSigning.KeyId,System.String,System.DateTimeOffset)">
+            <summary>
+                Creates a new instance of this class.
+            </summary>
+            <param name="clientId">The identity of the client for which the nonce is used.</param>
+            <param name="value">The nonce value.</param>
+            <param name="expiration">The time when the nonce value can be reused for subsequent requests form the client.</param>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.Nonce.ClientId">
+            <summary>
+                Gets or sets the identity of the client for which the nonce is used.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.Nonce.Value">
+            <summary>
+                Gets or sets the nonce value.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.Nonce.Expiration">
+            <summary>
+                Gets or sets the time when the nonce value can be reused for subsequent requests form the client.
+            </summary>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.ReplayedRequestSignatureVerificationFailure">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.ReplayedRequestSignatureVerificationFailure.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResult">
+            <summary>
+                Represents the result of the request signature verification.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResult.#ctor(Dalion.HttpMessageSigning.Verification.Client,Dalion.HttpMessageSigning.Verification.HttpRequestForVerification)">
+            <summary>
+                Creates a new instance of this class.
+            </summary>
+            <param name="client">The client for which the verification happened.</param> 
+            <param name="requestForVerification">The data of the request that was used to verify.</param>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResult.Client">
+            <summary>
+                Gets the client for which the verification happened.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResult.RequestForVerification">
+            <summary>
+            Gets the data of the request that was used to verify.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResult.IsSuccess">
+            <summary>
+                Gets a value indicating whether the signature was successfully verified.
+            </summary>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResultFailure">
+            <summary>
+            Represents a request signature verification failure.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResultFailure.#ctor(Dalion.HttpMessageSigning.Verification.Client,Dalion.HttpMessageSigning.Verification.HttpRequestForVerification,Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure)">
+            <summary>
+            Creates a new instance of this class.
+            </summary>
+            <param name="client">The client for which the verification happened.</param>
+            <param name="requestForVerification">The data of the request that was used to verify.</param>
+            <param name="failure">An object that indicates why the verification failed.</param>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResultFailure.Failure">
+            <summary>
+            Gets an object that indicates why the verification failed.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResultFailure.IsSuccess">
+            <summary>
+            Gets a value indicating whether the signature was successfully verified.
+            </summary>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResultSuccess">
+            <summary>
+                Represents a successful signature verification.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResultSuccess.#ctor(Dalion.HttpMessageSigning.Verification.Client,Dalion.HttpMessageSigning.Verification.HttpRequestForVerification,System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+                Creates a new instance of this class.
+            </summary>
+            <param name="client">The client for which the verification happened.</param>
+            <param name="requestForVerification">The data of the request that was used to verify.</param>
+            <param name="principal">The principal that represents the verified signature.</param>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResultSuccess.Principal">
+            <summary>
+                Gets the principal that represents the verified signature.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.RequestSignatureVerificationResultSuccess.IsSuccess">
+            <summary>
+                Gets a value indicating whether the signature was successfully verified.
+            </summary>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.SignatureExpiredSignatureVerificationFailure">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureExpiredSignatureVerificationFailure.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.SignatureVerificationException">
+            <summary>
+                Represents an <see cref="T:System.Exception" /> that indicates that a HttpMessageSigning verification operation has resulted in an error.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationException.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationException.#ctor(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationException.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure">
+            <summary>
+                Represents a failure of a request signature verification process.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+                Creates a new instance of this class.
+            </summary>
+            <param name="code">The code that identifies the type of failure.</param>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="exception">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.Code">
+            <summary>
+                Gets the code that identifies the type of failure.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.Message">
+            <summary>
+                Gets the informational message that describes the failure.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.Exception">
+            <summary>
+                Gets the exception that caused the failure, or a null reference if it is not caused by an exception.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.Equals(Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure)">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.op_Equality(Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure,Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure)">
+            <summary>
+                The equality operator of this type.
+            </summary>
+            <returns>True if the specified items are equal, otherwise false.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.op_Inequality(Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure,Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure)">
+            <summary>
+                The inequality operator of this type.
+            </summary>
+            <returns>True if the specified items are not equal, otherwise false.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.InvalidClient(System.String,System.Exception)">
+            <summary>
+                Represents a failure that is caused by specifying an invalid client.
+            </summary>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="ex">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <returns>The newly created failure.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.InvalidSignature(System.String,System.Exception)">
+            <summary>
+                Represents a failure that is caused by specifying an invalid signature.
+            </summary>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="ex">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <returns>The newly created failure.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.HeaderMissing(System.String,System.Exception)">
+            <summary>
+                Represents a failure that is caused by a missing header that is part of the signature.
+            </summary>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="ex">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <returns>The newly created failure.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.InvalidCreatedHeader(System.String,System.Exception)">
+            <summary>
+                Represents a failure that is caused by an invalid value of the (created) pseudo-header.
+            </summary>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="ex">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <returns>The newly created failure.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.InvalidExpiresHeader(System.String,System.Exception)">
+            <summary>
+                Represents a failure that is caused by an invalid value of the (expires) pseudo-header.
+            </summary>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="ex">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <returns>The newly created failure.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.InvalidDigestHeader(System.String,System.Exception)">
+            <summary>
+                Represents a failure that is caused by an invalid value of the digest header.
+            </summary>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="ex">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <returns>The newly created failure.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.InvalidSignatureAlgorithm(System.String,System.Exception)">
+            <summary>
+                Represents a failure that is caused by an invalid signature algorithm.
+            </summary>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="ex">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <returns>The newly created failure.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.SignatureExpired(System.String,System.Exception)">
+            <summary>
+                Represents a failure that is caused by the signature being expired.
+            </summary>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="ex">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <returns>The newly created failure.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.InvalidSignatureString(System.String,System.Exception)">
+            <summary>
+                Represents a failure that is caused by an invalid signature string.
+            </summary>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="ex">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <returns>The newly created failure.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.SignatureVerificationFailure.ReplayedRequest(System.String,System.Exception)">
+            <summary>
+                Represents a failure that is caused by a replayed request.
+            </summary>
+            <param name="message">The informational message that describes the failure.</param>
+            <param name="ex">The exception that caused the failure, or a null reference if it is not caused by an exception.</param>
+            <returns>The newly created failure.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.SignedHttpRequestClaimTypes">
+            <summary>
+                Defines the known claim types of verified principals.
+            </summary>
+        </member>
+        <member name="F:Dalion.HttpMessageSigning.Verification.SignedHttpRequestClaimTypes.AppId">
+            <summary>
+                The 'AppId' claim.
+            </summary>
+        </member>
+        <member name="F:Dalion.HttpMessageSigning.Verification.SignedHttpRequestClaimTypes.Name">
+            <summary>
+                The 'Name' claim.
+            </summary>
+        </member>
+        <member name="F:Dalion.HttpMessageSigning.Verification.SignedHttpRequestClaimTypes.Role">
+            <summary>
+                The 'Role' claim.
+            </summary>
+        </member>
+        <member name="F:Dalion.HttpMessageSigning.Verification.SignedHttpRequestClaimTypes.Version">
+            <summary>
+                The 'Version' claim.
+            </summary>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.SignedHttpRequestDefaults">
+            <summary>
+                Defines defaults for the Signature authentication scheme.
+            </summary>
+        </member>
+        <member name="F:Dalion.HttpMessageSigning.Verification.SignedHttpRequestDefaults.AuthenticationScheme">
+            <summary>
+                The default authentication scheme name.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dalion.HttpMessageSigning.Verification.AspNetCore</name>
+    </assembly>
+    <members>
+        <member name="T:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions">
+            <summary>
+                Extension methods for this library.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.AddSignedRequests(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)">
+            <summary>
+                Adds http message signing scheme registrations to the <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" />.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to add the registrations to.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to which the registrations were added.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.AddSignedRequests(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String)">
+            <summary>
+                Adds http message signing scheme registrations to the <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" />.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to add the registrations to.</param>
+            <param name="authenticationScheme">The name of the authentication scheme.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to which the registrations were added.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.AddSignedRequests(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Dalion.HttpMessageSigning.Verification.AspNetCore.SignedRequestAuthenticationOptions})">
+            <summary>
+                Adds http message signing scheme registrations to the <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" />.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to add the registrations to.</param>
+            <param name="configureOptions">The action that configures the authentication options.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to which the registrations were added.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.AddSignedRequests(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.Action{Dalion.HttpMessageSigning.Verification.AspNetCore.SignedRequestAuthenticationOptions})">
+            <summary>
+                Adds http message signing scheme registrations to the <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" />.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to add the registrations to.</param>
+            <param name="authenticationScheme">The name of the authentication scheme.</param>
+            <param name="configureOptions">The action that configures the authentication options.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder" /> to which the registrations were added.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.UseAspNetCoreSignatureVerification(Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder)">
+            <summary>Adds support for the ASP.NET Core authentication scheme that verifies HTTP message signatures.</summary>
+            <param name="builder">The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that is used to configure verification.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.UseSignatureParser``1(Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder)">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser" />.</summary>
+            <param name="builder">The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that is used to configure verification.</param>
+            <typeparam name="TSignatureParser">The type of the <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser" /> that is to be used.</typeparam>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.UseSignatureParser(Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder,Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser)">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser" />.</summary>
+            <param name="builder">The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that is used to configure verification.</param>
+            <param name="signatureParser">The <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser" /> that is to be used.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.UseSignatureParser(Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder,System.Func{System.IServiceProvider,Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser})">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser" />.</summary>
+            <param name="builder">The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that is used to configure verification.</param>
+            <param name="signatureParserFactory">The factory that creates the <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser" /> that is to be used.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.UseAuthenticationHeaderExtractor``1(Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder)">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.IAuthenticationHeaderExtractor" />.</summary>
+            <param name="builder">The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that is used to configure verification.</param>
+            <typeparam name="TAuthenticationHeaderExtractor">The type of the <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.IAuthenticationHeaderExtractor" /> that is to be used.</typeparam>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.UseAuthenticationHeaderExtractor(Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder,Dalion.HttpMessageSigning.Verification.AspNetCore.IAuthenticationHeaderExtractor)">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.IAuthenticationHeaderExtractor" />.</summary>
+            <param name="builder">The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that is used to configure verification.</param>
+            <param name="authenticationHeaderExtractor">The <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.IAuthenticationHeaderExtractor" /> that is to be used.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.UseAuthenticationHeaderExtractor(Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder,System.Func{System.IServiceProvider,Dalion.HttpMessageSigning.Verification.AspNetCore.IAuthenticationHeaderExtractor})">
+            <summary>Configures HTTP message signature verification to use the specified <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.IAuthenticationHeaderExtractor" />.</summary>
+            <param name="builder">The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that is used to configure verification.</param>
+            <param name="authenticationHeaderExtractorFactory">The factory that creates the <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.IAuthenticationHeaderExtractor" /> that is to be used.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to continue configuring the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.AddHttpMessageSignatureVerificationForAspNetCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>Adds http message signature verification and ASP.NET Core authentication scheme registrations to the specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the registrations to.</param>
+            <returns>The <see cref="T:Dalion.HttpMessageSigning.Verification.IHttpMessageSigningVerificationBuilder" /> that can be used to configure the verification settings.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.AddHttpMessageSignatureVerification(Microsoft.Extensions.DependencyInjection.IServiceCollection,Dalion.HttpMessageSigning.Verification.Client,Dalion.HttpMessageSigning.Verification.Client[])">
+            <summary>Adds http message signature verification registrations to the specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the registrations to.</param>
+            <param name="firstClient">The client that is allowed to authenticate.</param>
+            <param name="additionalClients">The clients that are allowed to authenticate.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to which the registrations were added.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.AddHttpMessageSignatureVerification(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,System.Collections.Generic.IEnumerable{Dalion.HttpMessageSigning.Verification.Client}})">
+            <summary>Adds http message signature verification registrations to the specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the registrations to.</param>
+            <param name="allowedClientsFactory">The factory that creates the clients that are allowed to authenticate.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to which the registrations were added.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.AddHttpMessageSignatureVerification(Microsoft.Extensions.DependencyInjection.IServiceCollection,Dalion.HttpMessageSigning.Verification.IClientStore)">
+            <summary>Adds http message signature verification registrations to the specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the registrations to.</param>
+            <param name="clientStore">The store that contains the registered clients.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to which the registrations were added.</returns>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.Extensions.AddHttpMessageSignatureVerification(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,Dalion.HttpMessageSigning.Verification.IClientStore})">
+            <summary>Adds http message signature verification registrations to the specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the registrations to.</param>
+            <param name="clientStoreFactory">The factory that creates the store that contains the registered clients.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to which the registrations were added.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.AspNetCore.IAuthenticationHeaderExtractor">
+            <summary>
+                Extracts the values of the header that contains the signature.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.IAuthenticationHeaderExtractor.Extract(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+                Extract the values of the header that contains the signature.
+            </summary>
+            <param name="request">The <see cref="T:Microsoft.AspNetCore.Http.HttpRequest" /> to extract the values from.</param>
+            <returns>A <see cref="T:System.Net.Http.Headers.AuthenticationHeaderValue" /> that contains the Scheme and Parameter, that the specified <see cref="T:Microsoft.AspNetCore.Http.HttpRequest" /> contains.</returns>
+            <remarks>This method returns <see langword="null" /> when the request does not contain authentication information.</remarks>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.AspNetCore.IRequestSignatureVerifier">
+            <summary>
+            Service that verifies a signature of the specified request, in the form of an Authorization header.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.IRequestSignatureVerifier.VerifySignature(Microsoft.AspNetCore.Http.HttpRequest,Dalion.HttpMessageSigning.Verification.AspNetCore.SignedRequestAuthenticationOptions)">
+            <summary>
+            Verify the signature of the specified request.
+            </summary>
+            <param name="request">The request to verify the signature for.</param>
+            <param name="options">The authentication options.</param>
+            <returns>A verification result that indicates success or failure.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser">
+            <summary>
+                Supports parsing the specified <see cref="T:Microsoft.AspNetCore.Http.HttpRequest" /> to a <see cref="T:Dalion.HttpMessageSigning.Signature" />.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser.Parse(Microsoft.AspNetCore.Http.HttpRequest,Dalion.HttpMessageSigning.Verification.AspNetCore.SignedRequestAuthenticationOptions)">
+            <summary>
+                Parse the specified <see cref="T:Microsoft.AspNetCore.Http.HttpRequest" /> to a <see cref="T:Dalion.HttpMessageSigning.Signature" />.
+            </summary>
+            <param name="request">The <see cref="T:Microsoft.AspNetCore.Http.HttpRequest" /> to parse.</param>
+            <param name="options">The configured authentication options.</param>
+            <returns>The result of the parsing, containing the parsed signature if successful, or the cause of failure.</returns>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingFailure">
+            <summary>
+                Represents an unsuccessful result of a <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser" />.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingFailure.#ctor(System.String,System.Exception)">
+            <summary>
+                Creates a new instance of this class.
+            </summary>
+            <param name="description">The description of the cause of the failure.</param>
+            <param name="failure">The <see cref="T:System.Exception" /> that caused the failure, if any.</param>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingFailure.IsSuccess">
+            <inheritdoc />
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingFailure.Description">
+            <summary>
+                Gets the description of the cause of the failure.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingFailure.Failure">
+            <summary>
+                Gets the <see cref="T:System.Exception" /> that caused the failure, or <see langword="null" /> if no <see cref="T:System.Exception" /> occurred.
+            </summary>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingResult">
+            <summary>
+                A base class for signature parsing results.
+                <seealso cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingSuccess" />
+                <seealso cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingFailure" />
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingResult.IsSuccess">
+            <summary>
+                Gets a value indicating whether or not the parsing was successful.
+            </summary>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingSuccess">
+            <summary>
+                Represents a successful result of a <see cref="T:Dalion.HttpMessageSigning.Verification.AspNetCore.ISignatureParser" />.
+            </summary>
+        </member>
+        <member name="M:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingSuccess.#ctor(Dalion.HttpMessageSigning.Signature)">
+            <summary>
+                Creates a new instance of this class.
+            </summary>
+            <param name="signature">The successfully parsed <see cref="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingSuccess.Signature" />.</param>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingSuccess.IsSuccess">
+            <inheritdoc />
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingSuccess.Signature">
+            <summary>
+                Gets the successfully parsed <see cref="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignatureParsingSuccess.Signature" />.
+            </summary>
+        </member>
+        <member name="T:Dalion.HttpMessageSigning.Verification.AspNetCore.SignedRequestAuthenticationOptions">
+            <summary>
+                Options for the authentication scheme.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignedRequestAuthenticationOptions.Realm">
+            <summary>
+                Gets or sets the realm of the authentication scheme.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignedRequestAuthenticationOptions.Scheme">
+            <summary>
+                Gets or sets the name of the authentication scheme.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignedRequestAuthenticationOptions.OnSignatureParsed">
+            <summary>
+                Gets or sets the action to invoke when a request signature has been parsed.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignedRequestAuthenticationOptions.OnIdentityVerified">
+            <summary>
+                Gets or sets the action to invoke when an identity has been verified by this authentication scheme.
+            </summary>
+        </member>
+        <member name="P:Dalion.HttpMessageSigning.Verification.AspNetCore.SignedRequestAuthenticationOptions.OnIdentityVerificationFailed">
+            <summary>
+                Gets or sets the action to invoke when identity verification failed.
+            </summary>
+        </member>
+    </members>
+</doc>

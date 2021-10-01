@@ -1,0 +1,66 @@
+version: 1.0.0.{build}
+image: Visual Studio 2019
+services:
+  - mssql2017
+branches:
+  except:
+    - /dev_.*/
+environment:
+  PRODUCT: HttpMessageSigning
+  DISTPATH: ../../dist
+  CONFIGURATION: Release
+  SQLSERVER:USERID: sa
+  SQLSERVER:PASSWORD: Password12!
+  SQLSERVER:SERVERNAME: (local)\SQL2017
+  COVERALLS_REPO_TOKEN:  
+    secure: f9pWLoYMRSqoOcUvnz1PXF23eFoHQtEXohEcLf2PkhXVZk8Qj+J/0mh0ByXVwxbb
+nuget:
+  disable_publish_on_pr: true
+build_script:
+- ps: >-
+    dotnet --version
+    
+    $PackageVersion = Get-Content version.txt -First 1
+    
+    $ProductVersion = "$PackageVersion.$env:APPVEYOR_BUILD_NUMBER"
+    
+    Add-AppveyorMessage -Message "Determined the version to be $ProductVersion."
+    
+    Update-AppveyorBuild -Version $ProductVersion
+    
+    & "./build.cmd" nopause
+
+test_script:
+- ps: >-    
+    $mainRepo = "DavidLievrouw/HttpMessageSigning"
+    
+    Add-AppveyorMessage -Message "Current repository: $env:APPVEYOR_REPO_NAME"
+    
+    Add-AppveyorMessage -Message "PR: $env:APPVEYOR_PULL_REQUEST_NUMBER"
+    
+    Add-AppveyorMessage -Message "PR head repository: $env:APPVEYOR_PULL_REQUEST_HEAD_REPO_NAME"
+    
+    if ($mainRepo -eq $env:APPVEYOR_REPO_NAME) {
+    
+      dotnet tool install coveralls.net --version 1.0.0 --tool-path tools
+      
+      $coveralls = ".\tools\csmacnz.coveralls.exe"
+  
+      & "./coverage.cmd" nopause
+    
+      & $coveralls --opencover -i src\coverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_JOB_ID
+      
+    }
+    
+    else {
+    
+      Add-AppveyorMessage -Message "Skipping coverage report, because this build was not triggered from the main repository ($mainRepo)."
+    
+      & "./test.cmd" nopause
+      
+    }
+    
+artifacts:
+- path: ./dist/%CONFIGURATION%
+  name: dist
+deploy: off

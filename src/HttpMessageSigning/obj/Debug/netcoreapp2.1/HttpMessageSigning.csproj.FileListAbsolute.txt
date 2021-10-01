@@ -1,0 +1,13 @@
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/bin/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.deps.json
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/bin/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.dll
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/bin/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.pdb
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/bin/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.xml
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/obj/Debug/netcoreapp2.1/HttpMessageSigning.csproj.AssemblyReference.cache
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/obj/Debug/netcoreapp2.1/HttpMessageSigning.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/obj/Debug/netcoreapp2.1/HttpMessageSigning.AssemblyInfoInputs.cache
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/obj/Debug/netcoreapp2.1/HttpMessageSigning.AssemblyInfo.cs
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/obj/Debug/netcoreapp2.1/HttpMessageSigning.csproj.CoreCompileInputs.cache
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/obj/Debug/netcoreapp2.1/HttpMessageSigning.sourcelink.json
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/obj/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.dll
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/obj/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.xml
+/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/obj/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.pdb

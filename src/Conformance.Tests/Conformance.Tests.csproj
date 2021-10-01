@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5</TargetFramework>
+        <AssemblyName>Dalion.HttpMessageSigning.Conformance.Tests</AssemblyName>
+        <RootNamespace>Dalion.HttpMessageSigning</RootNamespace>
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+    </PropertyGroup>
+
+    <Target Name="InitVersion" BeforeTargets="BeforeBuild">
+        <ReadLinesFromFile File="..\..\version.txt">
+            <Output TaskParameter="Lines" PropertyName="PackageVersion" />
+        </ReadLinesFromFile>
+        <PropertyGroup>
+            <BuildCounter Condition="'$(BuildCounter)'==''">0</BuildCounter>
+            <ProductVersion Condition="'$(ProductVersion)'=='' And $(PackageVersion.IndexOf('-')) &gt; -1">$(PackageVersion.Substring(0, $(PackageVersion.IndexOf('-')))).$(BuildCounter)</ProductVersion>
+            <ProductVersion Condition="'$(ProductVersion)'=='' And $(PackageVersion.IndexOf('-')) &lt; 0">$(PackageVersion).$(BuildCounter)</ProductVersion>
+            <Version>$(ProductVersion)</Version>
+            <InformationalVersion>$(ProductVersion)</InformationalVersion>
+        </PropertyGroup>
+    </Target>
+    
+    <ItemGroup>
+        <PackageReference Include="Appveyor.TestLogger" Version="2.0.0" />
+        <PackageReference Include="CompareNETObjects" Version="4.65.0" />
+        <PackageReference Include="coverlet.msbuild" Version="2.8.0" />
+        <PackageReference Include="FakeItEasy" Version="6.0.0" />
+        <PackageReference Include="FluentAssertions" Version="5.10.3" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+        <PackageReference Include="Mongo2Go" Version="2.2.12" />
+        <PackageReference Include="PemUtils" Version="3.0.0.82" />
+        <PackageReference Include="xunit" Version="2.4.1" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HttpMessageSigning.Signing\HttpMessageSigning.Signing.csproj" />
+        <ProjectReference Include="..\HttpMessageSigning.Verification.AspNetCore\HttpMessageSigning.Verification.AspNetCore.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Keys\koblitzCurve.private" />
+        <EmbeddedResource Include="Keys\koblitzCurve.pub" />
+        <EmbeddedResource Include="Keys\p256.private" />
+        <EmbeddedResource Include="Keys\p256.pub" />
+        <EmbeddedResource Include="Keys\rsa.private" />
+        <EmbeddedResource Include="Keys\rsa.pub" />
+        <EmbeddedResource Include="HttpMessages\basic-request.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\created-ecdsa.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\created-hmac.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\created-rsa.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\default-request.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\ecdsa-signed-request.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\hmac-signed-request.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\ignore-case.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\multi-value-header-request.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\p256-signed-request.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\rsa-signed-request.httpMessage" />
+        <EmbeddedResource Include="HttpMessages\zero-length-header-request.httpMessage" />
+    </ItemGroup>
+
+</Project>

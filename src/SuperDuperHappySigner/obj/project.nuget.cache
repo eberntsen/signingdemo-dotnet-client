@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "eq+IrgMu24ARls205WHFe/9E2O3bHWEUBLSALVsJic2ZXz2gQumCEUC53mS5Ua4+AS348FCRlpmmy/dBm1BZvw==",
+  "success": true,
+  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/SuperDuperHappySigner/SuperDuperHappySigner.csproj",
+  "expectedPackageFiles": [
+    "/Users/eirikb/.nuget/packages/microsoft.extensions.dependencyinjection/5.0.0/microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "/Users/eirikb/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/5.0.0/microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "/Users/eirikb/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "/Users/eirikb/.nuget/packages/microsoft.extensions.objectpool/5.0.0/microsoft.extensions.objectpool.5.0.0.nupkg.sha512",
+    "/Users/eirikb/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

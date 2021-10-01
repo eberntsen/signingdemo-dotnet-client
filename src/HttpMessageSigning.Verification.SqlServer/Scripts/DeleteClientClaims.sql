@@ -1,0 +1,1 @@
+﻿DELETE FROM {ClientClaimsTableName} WHERE [ClientId] = @ClientId;

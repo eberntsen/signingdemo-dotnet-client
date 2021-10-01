@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Dalion.HttpMessageSigning.Verification.AspNetCore</id>
+    <version>6.3.0</version>
+    <title>Dalion.HttpMessageSigning.Verification.AspNetCore</title>
+    <authors>David Lievrouw</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>dalion128.png</icon>
+    <projectUrl>https://github.com/DavidLievrouw/HttpMessageSigning</projectUrl>
+    <iconUrl>https://dalion.eu/dalion128.png</iconUrl>
+    <description>ASP.NET Core extensions for the Dalion HttpMessageSigning C# implementation of the IETF Internet-Draft "Signing HTTP Messages".</description>
+    <copyright>Copyright (c) 2021, David Lievrouw</copyright>
+    <tags>signing http messages ietf signatures lievrouw dalion asp asp.net aspnetcore core</tags>
+    <repository type="git" url="https://github.com/DavidLievrouw/HttpMessageSigning" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="Dalion.HttpMessageSigning.Verification" version="6.3.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication" version="[2.1.2, 2.2.0)" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Dalion.HttpMessageSigning.Verification" version="6.3.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net5.0">
+        <dependency id="Dalion.HttpMessageSigning.Verification" version="6.3.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp2.1" />
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+      <group targetFramework="net5.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/bin/Debug/net5/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" target="lib/net5.0/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" />
+    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/bin/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" target="lib/netcoreapp2.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" />
+    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/bin/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" target="lib/netcoreapp3.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" />
+  </files>
+</package>

@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net472;netcoreapp2.1;netcoreapp3.1;net5</TargetFrameworks>
+        <AssemblyName>Dalion.HttpMessageSigning.TestUtils</AssemblyName>
+        <RootNamespace>Dalion.HttpMessageSigning.TestUtils</RootNamespace>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <Target Name="InitVersion" BeforeTargets="BeforeBuild">
+        <ReadLinesFromFile File="..\..\version.txt">
+            <Output TaskParameter="Lines" PropertyName="PackageVersion" />
+        </ReadLinesFromFile>
+        <PropertyGroup>
+            <BuildCounter Condition="'$(BuildCounter)'==''">0</BuildCounter>
+            <ProductVersion Condition="'$(ProductVersion)'=='' And $(PackageVersion.IndexOf('-')) &gt; -1">$(PackageVersion.Substring(0, $(PackageVersion.IndexOf('-')))).$(BuildCounter)</ProductVersion>
+            <ProductVersion Condition="'$(ProductVersion)'=='' And $(PackageVersion.IndexOf('-')) &lt; 0">$(PackageVersion).$(BuildCounter)</ProductVersion>
+            <Version>$(ProductVersion)</Version>
+            <InformationalVersion>$(ProductVersion)</InformationalVersion>
+        </PropertyGroup>
+    </Target>
+
+    <PropertyGroup Condition="'$(TargetFramework)'=='net472'">
+        <DefineConstants>NETFULL;NETSTANDARD;NETFRAMEWORK;NET472</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp2.1'">
+        <DefineConstants>NETCORE;NETSTANDARD;NETCOREAPP2_1</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
+        <DefineConstants>NETCORE;NETSTANDARD;NETCOREAPP3_1</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(TargetFramework)'=='net5'">
+        <DefineConstants>NETCORE;NETSTANDARD;NET5</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)'=='net472'">
+        <PackageReference Include="FakeItEasy" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Owin.Security" Version="4.1.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="3.1.2" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.2" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.2" />
+        <Reference Include="System.Net.Http" />
+    </ItemGroup>
+    
+    <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp2.1'">
+        <PackageReference Include="FakeItEasy" Version="6.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="[2.1.2,2.2.0)" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="[2.1.2,2.2.0)" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="[2.1.1,2.2.0)" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="[2.1.1,2.2.0)" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="FakeItEasy" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="3.1.2" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.2" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.2" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)'=='net5'">
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="FakeItEasy" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    </ItemGroup>
+    
+</Project>

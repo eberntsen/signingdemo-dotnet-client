@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Dalion.HttpMessageSigning.Verification
+build_property.ProjectDir = /Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification/
