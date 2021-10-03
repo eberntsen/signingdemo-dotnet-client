@@ -32,7 +32,6 @@
 /Users/eirikb/Downloads/HttpMessageSigning-master/src/Console/obj/Debug/net5/Console.pdb
 /Users/eirikb/Downloads/HttpMessageSigning-master/src/Console/obj/Debug/net5/Console.genruntimeconfig.cache
 /Users/eirikb/Downloads/HttpMessageSigning-master/src/Console/bin/Debug/net5/signing_demo.pfx
-/Users/eirikb/signingdemo-dotnet-client/src/Console/bin/Debug/net5/dalion.local.pfx
 /Users/eirikb/signingdemo-dotnet-client/src/Console/bin/Debug/net5/signing_demo.pfx
 /Users/eirikb/signingdemo-dotnet-client/src/Console/bin/Debug/net5/Console.deps.json
 /Users/eirikb/signingdemo-dotnet-client/src/Console/bin/Debug/net5/Console.runtimeconfig.json

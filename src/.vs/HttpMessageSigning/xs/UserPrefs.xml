@@ -2,31 +2,17 @@
   <MonoDevelop.Ide.ItemProperties.Samples.Console PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Console/SampleRSA.cs">
     <Files>
-      <File FileName="Console/Program.cs" Line="9" Column="10" />
-      <File FileName="Console/SampleRSA.cs" Line="71" Column="16" />
-      <File FileName="HttpMessageSigning.Signing/RequestSignerFactory.cs" Line="54" Column="68" />
-      <File FileName="HttpMessageSigning.Signing/RequestSigner.cs" Line="70" Column="1" />
-      <File FileName="HttpMessageSigning.Signing/ISignatureCreator.cs" Line="7" Column="30" />
-      <File FileName="HttpMessageSigning.Signing/SignatureCreator.cs" Line="30" Column="76" />
-      <File FileName="HttpMessageSigning/Signature.cs" Line="14" Column="1" />
-      <File FileName="Console/SampleHMAC.cs" />
-      <File FileName="Console/WebApplicationClient.cs" Line="41" Column="10" />
-      <File FileName="HttpMessageSigning.Signing/ISigningStringCompositionRequestFactory.cs" Line="6" Column="48" />
-      <File FileName="HttpMessageSigning.Signing/SigningStringCompositionRequestFactory.cs" Line="14" Column="24" />
-      <File FileName="HttpMessageSigning/SignatureAlgorithm.cs" Line="52" Column="23" />
+      <File FileName="Console/SampleRSA.cs" Line="18" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="HttpMessageSigning" expanded="True">
-            <Node name="Assets" expanded="True" />
             <Node name="Samples" expanded="True">
               <Node name="Console" expanded="True">
                 <Node name="SampleRSA.cs" selected="True" />
               </Node>
             </Node>
-            <Node name="HttpMessageSigning" expanded="True" />
-            <Node name="HttpMessageSigning.Signing" expanded="True" />
           </Node>
         </State>
       </Pad>

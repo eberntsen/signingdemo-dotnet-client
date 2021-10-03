@@ -13,7 +13,7 @@
     <description>HTTP request signing extensions for the Dalion HttpMessageSigning C# implementation of the IETF Internet-Draft "Signing HTTP Messages".</description>
     <copyright>Copyright (c) 2021, David Lievrouw</copyright>
     <tags>signing http messages ietf signatures lievrouw dalion</tags>
-    <repository type="git" url="https://github.com/DavidLievrouw/HttpMessageSigning" commit="ac0b0a54743ea4b08a42db0223295de9077c1d15" />
+    <repository type="git" url="https://github.com/DavidLievrouw/HttpMessageSigning" commit="57e27085f52b0ddcdeb72a8570c716cdcddb69d0" />
     <dependencies>
       <group targetFramework=".NETFramework4.7.2">
         <dependency id="Dalion.HttpMessageSigning" version="6.3.0" exclude="Build,Analyzers" />
