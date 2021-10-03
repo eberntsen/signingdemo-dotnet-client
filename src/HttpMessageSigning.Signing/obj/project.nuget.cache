@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xZjh+4eHj+sVAXhiZBVwtTyZ8oJEUGkjbMTYtAfaaeFmuUvgP7aBeoIG/sV9rs7yd9++BzhNu8iD4sjQixT9Lw==",
+  "dgSpecHash": "kekYH5BFILKdsYkk3rPEjYHEqaCUM2LwWKtpoQ6+WCLJt8nRQjR66sVQ6fkqkqehCiHvj9xVEHR4d9A2N6cMDw==",
   "success": true,
-  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj",
+  "projectFilePath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj",
   "expectedPackageFiles": [
     "/Users/eirikb/.nuget/packages/microsoft.build.tasks.git/1.0.0/microsoft.build.tasks.git.1.0.0.nupkg.sha512",
     "/Users/eirikb/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/2.1.1/microsoft.extensions.dependencyinjection.abstractions.2.1.1.nupkg.sha512",

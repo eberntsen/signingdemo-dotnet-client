@@ -1288,11 +1288,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj",
+      "projectUniqueName": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj",
       "projectName": "Dalion.HttpMessageSigning.Verification.Owin",
-      "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj",
+      "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj",
       "packagesPath": "/Users/eirikb/.nuget/packages/",
-      "outputPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin/obj/",
+      "outputPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/eirikb/.config/NuGet/NuGet.Config"
@@ -1307,8 +1307,8 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification/HttpMessageSigning.Verification.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification/HttpMessageSigning.Verification.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification/HttpMessageSigning.Verification.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification/HttpMessageSigning.Verification.csproj"
             }
           }
         }

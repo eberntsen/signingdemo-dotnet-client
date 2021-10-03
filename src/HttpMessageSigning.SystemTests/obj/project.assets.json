@@ -13846,11 +13846,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.SystemTests/HttpMessageSigning.SystemTests.csproj",
+      "projectUniqueName": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.SystemTests/HttpMessageSigning.SystemTests.csproj",
       "projectName": "Dalion.HttpMessageSigning.SystemTests",
-      "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.SystemTests/HttpMessageSigning.SystemTests.csproj",
+      "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.SystemTests/HttpMessageSigning.SystemTests.csproj",
       "packagesPath": "/Users/eirikb/.nuget/packages/",
-      "outputPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.SystemTests/obj/",
+      "outputPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.SystemTests/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
@@ -13869,56 +13869,56 @@
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "projectReferences": {
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj"
             },
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj"
             },
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj"
             }
           }
         },
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj"
             },
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj"
             },
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj"
             }
           }
         },
         "net5.0": {
           "targetAlias": "net5",
           "projectReferences": {
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj"
             },
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj"
             },
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj"
             }
           }
         },
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj"
             },
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj"
             },
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj"
             }
           }
         }

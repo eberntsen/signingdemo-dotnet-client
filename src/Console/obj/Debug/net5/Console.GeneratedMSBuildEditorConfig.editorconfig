@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Console
-build_property.ProjectDir = /Users/eirikb/Downloads/HttpMessageSigning-master/src/Console/
+build_property.ProjectDir = /Users/eirikb/signingdemo-dotnet-client/src/Console/

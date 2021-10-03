@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N9/xLG9evwgh6YtGrsjU/J2S82mX6ZEjdJ3cJm7hfuykLrbBBSB0+Ij68CIWzPD2WLre3SfXSRRAhbfidf/weQ==",
+  "dgSpecHash": "76/dm5zdXwKXIM43zDIQYls6a2zM0aw8fPkaRLdL3cGH0gcBC04j0mNqrzSfl9w5nQg8YWjcBc0hH843rMs3Sw==",
   "success": true,
-  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/Console/Console.csproj",
+  "projectFilePath": "/Users/eirikb/signingdemo-dotnet-client/src/Console/Console.csproj",
   "expectedPackageFiles": [
     "/Users/eirikb/.nuget/packages/castle.core/4.3.1/castle.core.4.3.1.nupkg.sha512",
     "/Users/eirikb/.nuget/packages/fakeiteasy/6.0.0/fakeiteasy.6.0.0.nupkg.sha512",

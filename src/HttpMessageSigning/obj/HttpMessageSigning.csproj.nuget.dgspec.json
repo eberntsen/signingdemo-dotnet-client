@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/HttpMessageSigning.csproj": {}
+    "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning/HttpMessageSigning.csproj": {}
   },
   "projects": {
-    "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/HttpMessageSigning.csproj": {
+    "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning/HttpMessageSigning.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/HttpMessageSigning.csproj",
+        "projectUniqueName": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning/HttpMessageSigning.csproj",
         "projectName": "Dalion.HttpMessageSigning",
-        "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/HttpMessageSigning.csproj",
+        "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning/HttpMessageSigning.csproj",
         "packagesPath": "/Users/eirikb/.nuget/packages/",
-        "outputPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/obj/",
+        "outputPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning/obj/",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [

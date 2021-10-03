@@ -2043,11 +2043,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin.Tests/HttpMessageSigning.Verification.Owin.Tests.csproj",
+      "projectUniqueName": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin.Tests/HttpMessageSigning.Verification.Owin.Tests.csproj",
       "projectName": "Dalion.HttpMessageSigning.Verification.Owin.Tests",
-      "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin.Tests/HttpMessageSigning.Verification.Owin.Tests.csproj",
+      "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin.Tests/HttpMessageSigning.Verification.Owin.Tests.csproj",
       "packagesPath": "/Users/eirikb/.nuget/packages/",
-      "outputPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin.Tests/obj/",
+      "outputPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/eirikb/.config/NuGet/NuGet.Config"
@@ -2062,11 +2062,11 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/HttpMessageSigning.TestUtils.csproj"
             },
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj"
             }
           }
         }

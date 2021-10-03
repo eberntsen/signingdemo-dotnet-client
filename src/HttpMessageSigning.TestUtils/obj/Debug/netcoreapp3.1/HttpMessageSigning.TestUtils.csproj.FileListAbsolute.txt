@@ -8,3 +8,13 @@
 /Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/obj/Debug/netcoreapp3.1/HttpMessageSigning.TestUtils.csproj.CoreCompileInputs.cache
 /Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/obj/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.TestUtils.dll
 /Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.TestUtils/obj/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.TestUtils.pdb
+/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/bin/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.TestUtils.deps.json
+/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/bin/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.TestUtils.dll
+/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/bin/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.TestUtils.pdb
+/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/obj/Debug/netcoreapp3.1/HttpMessageSigning.TestUtils.csproj.AssemblyReference.cache
+/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/obj/Debug/netcoreapp3.1/HttpMessageSigning.TestUtils.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/obj/Debug/netcoreapp3.1/HttpMessageSigning.TestUtils.AssemblyInfoInputs.cache
+/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/obj/Debug/netcoreapp3.1/HttpMessageSigning.TestUtils.AssemblyInfo.cs
+/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/obj/Debug/netcoreapp3.1/HttpMessageSigning.TestUtils.csproj.CoreCompileInputs.cache
+/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/obj/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.TestUtils.dll
+/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.TestUtils/obj/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.TestUtils.pdb

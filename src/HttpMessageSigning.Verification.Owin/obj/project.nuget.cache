@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N/aLApYJD7Nw2lEWyPssOxFl0u0IqTprluMl3OMdiPK7pqFU2Wy3RakkLMYEFOj7FBHVF/WnrqqpT3rhmqexMA==",
+  "dgSpecHash": "n7kvyTCTLXYkRW/Cg19Sa6bK6cHsDxuPzadWcDfG/uuBblCtGU7pAmjj3sneIZ0vjv/+D68FxLb/YQ80s5AkTA==",
   "success": true,
-  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj",
+  "projectFilePath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.Owin/HttpMessageSigning.Verification.Owin.csproj",
   "expectedPackageFiles": [
     "/Users/eirikb/.nuget/packages/microsoft.build.tasks.git/1.0.0/microsoft.build.tasks.git.1.0.0.nupkg.sha512",
     "/Users/eirikb/.nuget/packages/microsoft.extensions.caching.abstractions/3.1.2/microsoft.extensions.caching.abstractions.3.1.2.nupkg.sha512",

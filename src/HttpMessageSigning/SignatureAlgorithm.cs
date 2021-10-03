@@ -53,7 +53,7 @@ namespace Dalion.HttpMessageSigning {
         /// <param name="certificate">The X.509 certificate to use.</param>
         /// <returns>The newly created <see cref="ISignatureAlgorithm" />.</returns>
         public static ISignatureAlgorithm CreateForSigning(X509Certificate2 certificate) {
-            return CreateForSigning(certificate, HashAlgorithmName.SHA512);
+            return CreateForSigning(certificate, HashAlgorithmName.SHA256);
         }
 
         /// <summary>

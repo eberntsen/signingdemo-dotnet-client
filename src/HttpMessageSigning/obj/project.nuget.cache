@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UNHqG1Q2c7NpR11LiDXwYOQa2pR6+dgwpW4ylj8l2tD1Q3V9WN1B4PCb4aGX1I0UXv5a/dPx9BbHOfIs+BDIPg==",
+  "dgSpecHash": "yy/RO+cXjpiBH87ZcJKp7fnefOoGLf6Zp5vpfqnJUKd4jnwiOFg4A5R2m+TDzuexGv0HFkRYELsc9yejNQJEwA==",
   "success": true,
-  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning/HttpMessageSigning.csproj",
+  "projectFilePath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning/HttpMessageSigning.csproj",
   "expectedPackageFiles": [
     "/Users/eirikb/.nuget/packages/microsoft.build.tasks.git/1.0.0/microsoft.build.tasks.git.1.0.0.nupkg.sha512",
     "/Users/eirikb/.nuget/packages/microsoft.extensions.objectpool/2.1.6/microsoft.extensions.objectpool.2.1.6.nupkg.sha512",

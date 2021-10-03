@@ -7073,11 +7073,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/Conformance.Tests/Conformance.Tests.csproj",
+      "projectUniqueName": "/Users/eirikb/signingdemo-dotnet-client/src/Conformance.Tests/Conformance.Tests.csproj",
       "projectName": "Dalion.HttpMessageSigning.Conformance.Tests",
-      "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/Conformance.Tests/Conformance.Tests.csproj",
+      "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/Conformance.Tests/Conformance.Tests.csproj",
       "packagesPath": "/Users/eirikb/.nuget/packages/",
-      "outputPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/Conformance.Tests/obj/",
+      "outputPath": "/Users/eirikb/signingdemo-dotnet-client/src/Conformance.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/eirikb/.config/NuGet/NuGet.Config"
@@ -7092,11 +7092,11 @@
         "net5.0": {
           "targetAlias": "net5",
           "projectReferences": {
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/HttpMessageSigning.Signing.csproj"
             },
-            "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj": {
-              "projectPath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj"
+            "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj": {
+              "projectPath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj"
             }
           }
         }

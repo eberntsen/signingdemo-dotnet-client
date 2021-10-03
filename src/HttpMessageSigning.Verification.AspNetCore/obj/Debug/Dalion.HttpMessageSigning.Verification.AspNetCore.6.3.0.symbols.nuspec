@@ -13,7 +13,7 @@
     <description>ASP.NET Core extensions for the Dalion HttpMessageSigning C# implementation of the IETF Internet-Draft "Signing HTTP Messages".</description>
     <copyright>Copyright (c) 2021, David Lievrouw</copyright>
     <tags>signing http messages ietf signatures lievrouw dalion asp asp.net aspnetcore core</tags>
-    <repository type="git" url="https://github.com/DavidLievrouw/HttpMessageSigning" />
+    <repository type="git" url="https://github.com/DavidLievrouw/HttpMessageSigning" commit="ac0b0a54743ea4b08a42db0223295de9077c1d15" />
     <dependencies>
       <group targetFramework=".NETCoreApp2.1">
         <dependency id="Dalion.HttpMessageSigning.Verification" version="6.3.0" exclude="Build,Analyzers" />
@@ -37,8 +37,8 @@
     </frameworkReferences>
   </metadata>
   <files>
-    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/bin/Debug/net5/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" target="lib/net5.0/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" />
-    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/bin/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" target="lib/netcoreapp2.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" />
-    <file src="/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/bin/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" target="lib/netcoreapp3.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" />
+    <file src="/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/bin/Debug/net5/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" target="lib/net5.0/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" />
+    <file src="/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/bin/Debug/netcoreapp2.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" target="lib/netcoreapp2.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" />
+    <file src="/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/bin/Debug/netcoreapp3.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" target="lib/netcoreapp3.1/Dalion.HttpMessageSigning.Verification.AspNetCore.pdb" />
   </files>
 </package>

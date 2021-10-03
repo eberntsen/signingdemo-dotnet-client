@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7VDlQ2SUGzCT9K6Uym8amhkMt9FCQ38tY9RwM5alrrXJhznNJw5K3glEIPWrrznmN5ZV6GF7Xzq9Q63M+yf2mw==",
+  "dgSpecHash": "s/ckPTiSgfKJaC4P0J3QGOIJZEZMbuda0p1WYM8Bhnx2+L1vjObAivW+8bQfHmlHuUBb7NJie2+VxYPT0AibRQ==",
   "success": true,
-  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.MongoDb/HttpMessageSigning.Verification.MongoDb.csproj",
+  "projectFilePath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.MongoDb/HttpMessageSigning.Verification.MongoDb.csproj",
   "expectedPackageFiles": [
     "/Users/eirikb/.nuget/packages/crc32c.net/1.0.5/crc32c.net.1.0.5.nupkg.sha512",
     "/Users/eirikb/.nuget/packages/dnsclient/1.2.0/dnsclient.1.2.0.nupkg.sha512",

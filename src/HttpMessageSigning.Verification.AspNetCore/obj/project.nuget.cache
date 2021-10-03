@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aKq7bOA3PTbaaUXEdvVj/+zTIkncphpon3y8TECftBGXNKbCR743K7L01zYOk6aCxmrmearkqI/XqD5uOtlGug==",
+  "dgSpecHash": "Oxfl6KV25x28IeruxV4VHnqQ8oJOw87fFhlQxQEs0EXgIDCQUFwimYKIM6Sfz9qz3EFlmuVBWEYEwrPZXVb4mg==",
   "success": true,
-  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj",
+  "projectFilePath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/HttpMessageSigning.Verification.AspNetCore.csproj",
   "expectedPackageFiles": [
     "/Users/eirikb/.nuget/packages/microsoft.aspnetcore.authentication/2.1.2/microsoft.aspnetcore.authentication.2.1.2.nupkg.sha512",
     "/Users/eirikb/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.1.1/microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",

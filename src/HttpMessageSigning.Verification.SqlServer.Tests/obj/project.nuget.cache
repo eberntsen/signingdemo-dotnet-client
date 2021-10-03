@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "548GJf78mrcViU8EbUwabBLNaoEKyeIUSv8NzE2qHwUFZ0/TqEhEHuXFpltFd/W9TlQyKHk7f1sJ4NNiwR4WKg==",
+  "dgSpecHash": "1LqUUleUaRok5QnBbvNlM9/60lMdsS3VGwQiw9K0Y8kKbgA11A7jXMt77ffdIpHjAGMp7RVVb2F8fD2se9o8UQ==",
   "success": true,
-  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.SqlServer.Tests/HttpMessageSigning.Verification.SqlServer.Tests.csproj",
+  "projectFilePath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.SqlServer.Tests/HttpMessageSigning.Verification.SqlServer.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/eirikb/.nuget/packages/appveyor.testlogger/2.0.0/appveyor.testlogger.2.0.0.nupkg.sha512",
     "/Users/eirikb/.nuget/packages/castle.core/4.3.1/castle.core.4.3.1.nupkg.sha512",

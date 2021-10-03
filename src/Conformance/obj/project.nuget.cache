@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xOm5ue4WZ+2ZUD7CfZTSwiKx6HAdwQRP5vetK84OMYkPknG5X6XTmalKBAXWAmxdlFMNFdcEjLestfqvTExhNA==",
+  "dgSpecHash": "BknydKKUxB7MKjcUwLh1qCXawQArgtFOkEhF3lHY6TNRUxzTazYhEns0OWMlSa0wR97P1HXMiurVnb3R+M8m6A==",
   "success": true,
-  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/Conformance/Conformance.csproj",
+  "projectFilePath": "/Users/eirikb/signingdemo-dotnet-client/src/Conformance/Conformance.csproj",
   "expectedPackageFiles": [
     "/Users/eirikb/.nuget/packages/castle.core/4.3.1/castle.core.4.3.1.nupkg.sha512",
     "/Users/eirikb/.nuget/packages/commandlineparser/2.8.0/commandlineparser.2.8.0.nupkg.sha512",

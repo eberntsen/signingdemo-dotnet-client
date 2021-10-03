@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("ASP.NET Core extensions for the Dalion HttpMessageSigning C# implementation of th" +
     "e IETF Internet-Draft \"Signing HTTP Messages\".")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("6.3.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("6.3.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("6.3.0.0+ac0b0a54743ea4b08a42db0223295de9077c1d15")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dalion.HttpMessageSigning.Verification.AspNetCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dalion.HttpMessageSigning.Verification.AspNetCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("6.3.0.0")]

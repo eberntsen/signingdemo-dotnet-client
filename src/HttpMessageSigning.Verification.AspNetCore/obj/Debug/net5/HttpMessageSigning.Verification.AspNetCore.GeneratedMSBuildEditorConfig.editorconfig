@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Dalion.HttpMessageSigning.Verification.AspNetCore
-build_property.ProjectDir = /Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.AspNetCore/
+build_property.ProjectDir = /Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.AspNetCore/

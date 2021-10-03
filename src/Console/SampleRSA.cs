@@ -65,7 +65,7 @@ namespace Console {
 
         private static async Task<HttpRequestMessage> SampleSignRSA(IRequestSignerFactory requestSignerFactory) {
             var request = new HttpRequestMessage {
-                RequestUri = new Uri("http://localhost:8080/api/stuff"),
+                RequestUri = new Uri("https://signingtest.azurewebsites.net/api/stuff"),
                 Method = HttpMethod.Get,
                 Headers = {
                     {"Dalion-App-Id", "ringor"}
@@ -78,20 +78,6 @@ namespace Console {
             await requestSigner.Sign(request);
            
             return request;
-        }
-
-        private static async Task SampleVerify(IRequestSignatureVerifier verifier, HttpRequestMessage clientRequest, ILogger<SampleRSA> logger) {
-            var receivedRequest = await clientRequest.ToServerSideHttpRequest();
-
-            var verificationResult = await verifier.VerifySignature(receivedRequest, new SignedRequestAuthenticationOptions());
-            if (verificationResult is RequestSignatureVerificationResultSuccess successResult) {
-                var simpleClaims = successResult.Principal.Claims.Select(c => new {c.Type, c.Value}).ToList();
-                var claimsString = string.Join(", ", simpleClaims.Select(c => $"{{type:{c.Type},value:{c.Value}}}"));
-                logger?.LogInformation("Request signature verification succeeded: {0}", claimsString);
-            }
-            else if (verificationResult is RequestSignatureVerificationResultFailure failureResult) {
-                logger?.LogWarning("Request signature verification failed: {0}", failureResult.Failure);
-            }
         }
     }
 }

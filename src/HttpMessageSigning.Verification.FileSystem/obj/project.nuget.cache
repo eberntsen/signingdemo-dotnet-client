@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VV0FTPEjHgi7YFJDQowAOtofrw9/zE/LXz5pUvCzyYIYjae5UiUtdmXLMetNBEehHu29LOCFGDezA5W2AGJPHA==",
+  "dgSpecHash": "35U8CWSKS1Hb9suIzHgdQhX56uP7x3Lv+1qxD1BWBrQWWGmIc52A/NMkfyEZ6+RP8UJUk/N9niT0ykcSNFga1A==",
   "success": true,
-  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.FileSystem/HttpMessageSigning.Verification.FileSystem.csproj",
+  "projectFilePath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.FileSystem/HttpMessageSigning.Verification.FileSystem.csproj",
   "expectedPackageFiles": [
     "/Users/eirikb/.nuget/packages/microsoft.build.tasks.git/1.0.0/microsoft.build.tasks.git.1.0.0.nupkg.sha512",
     "/Users/eirikb/.nuget/packages/microsoft.extensions.caching.abstractions/2.1.2/microsoft.extensions.caching.abstractions.2.1.2.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PWW8k6QJrdwFkWQEwtrTLhDs/ZdjisIca3eyIHmGSJpBeNvlX9WA+TWmzZFpfU+36HU2u5o82zxgLpDY9R7w1w==",
+  "dgSpecHash": "tfmp/89dwjIB3JXgoq211wuW/Vr0ubydCsLVpxv68XuUOdeAYIf7hDOSueJtPfMxUhi+2d69Jk4fV2ULcIDqjA==",
   "success": true,
-  "projectFilePath": "/Users/eirikb/Downloads/HttpMessageSigning-master/src/HttpMessageSigning.Verification.SqlServer/HttpMessageSigning.Verification.SqlServer.csproj",
+  "projectFilePath": "/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Verification.SqlServer/HttpMessageSigning.Verification.SqlServer.csproj",
   "expectedPackageFiles": [
     "/Users/eirikb/.nuget/packages/dapper/2.0.78/dapper.2.0.78.nupkg.sha512",
     "/Users/eirikb/.nuget/packages/microsoft.build.tasks.git/1.0.0/microsoft.build.tasks.git.1.0.0.nupkg.sha512",
