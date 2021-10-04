@@ -15,14 +15,18 @@ using Dalion.HttpMessageSigning.Verification.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Console {
-    public class SampleRSA {
-        public static async Task Run(string[] args) {
-            using (var serviceProvider = new ServiceCollection().Configure(ConfigureServices).BuildServiceProvider()) {
-                using (var signerFactory = serviceProvider.GetRequiredService<IRequestSignerFactory>()) {
-                 
-                        var logger = serviceProvider.GetService<ILogger<SampleRSA>>();
-                        var signedRequestForRSA = await SampleSignRSA(signerFactory);
+namespace Console
+{
+    public class SampleRSA
+    {
+        public static async Task Run(string[] args)
+        {
+            using (var serviceProvider = new ServiceCollection().Configure(ConfigureServices).BuildServiceProvider())
+            {
+                using (var signerFactory = serviceProvider.GetRequiredService<IRequestSignerFactory>())
+                {
+                    var logger = serviceProvider.GetService<ILogger<SampleRSA>>();
+                    var signedRequestForRSA = await SampleSignRSA(signerFactory);
 
                     using (var httpClient = new HttpClient())
                     {
@@ -43,40 +47,28 @@ namespace Console {
             }
         }
 
-        public static void ConfigureServices(IServiceCollection services) {
-            var cert = new X509Certificate2(File.ReadAllBytes("./signing_demo.pfx"), "pw", X509KeyStorageFlags.Exportable);
+        public static void ConfigureServices(IServiceCollection services)
+        {
+            var cert = new X509Certificate2(File.ReadAllBytes("./signing_demo.p12"), "pw", X509KeyStorageFlags.Exportable);
 
             services
                 .AddLogging(configure => configure.AddConsole().SetMinimumLevel(LogLevel.Debug))
                 .AddHttpMessageSigning()
                 .UseKeyId("signing-demo-v1")
-                .UseSignatureAlgorithm(SignatureAlgorithm.CreateForSigning(cert))
-                .Services
-                .AddHttpMessageSignatureVerification()
-                .UseClient(Client.Create(
-                    "signing-demo-v1",
-                    "HttpMessageSigningSampleRSA",
-                    SignatureAlgorithm.CreateForVerification(cert),
-                    options => options.Claims = new[] {
-                        new Claim(SignedHttpRequestClaimTypes.Role, "users.read")
-                    }
-                ));
+                .UseSignatureAlgorithm(SignatureAlgorithm.CreateForSigning(cert));
         }
 
-        private static async Task<HttpRequestMessage> SampleSignRSA(IRequestSignerFactory requestSignerFactory) {
-            var request = new HttpRequestMessage {
+        private static async Task<HttpRequestMessage> SampleSignRSA(IRequestSignerFactory requestSignerFactory)
+        {
+            var request = new HttpRequestMessage
+            {
                 RequestUri = new Uri("https://signingtest.azurewebsites.net/api/stuff"),
-                Method = HttpMethod.Get,
-                Headers = {
-                    {"Dalion-App-Id", "ringor"}
-                },
-                Content = new StringContent("", Encoding.ASCII, "application/json")
-
-        };
+                Method = HttpMethod.Get
+            };
 
             var requestSigner = requestSignerFactory.CreateFor("signing-demo-v1");
             await requestSigner.Sign(request);
-           
+
             return request;
         }
     }

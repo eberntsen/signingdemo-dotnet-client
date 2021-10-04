@@ -19,9 +19,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="signing_demo.pfx">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+      <None Remove="signing_demo.p12" />
     </ItemGroup>
-
+    <ItemGroup>
+      <EmbeddedResource Include="signing_demo.p12">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
 </Project>
