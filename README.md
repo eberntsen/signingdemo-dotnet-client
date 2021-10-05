@@ -23,6 +23,7 @@ ___
                 .AddLogging(configure => configure.AddConsole().SetMinimumLevel(LogLevel.Debug))
                 .AddHttpMessageSigning()
                 .UseKeyId("signing-demo-v1")
+                .UseDigestAlgorithm(HashAlgorithmName.SHA256)
                 .UseSignatureAlgorithm(SignatureAlgorithm.CreateForSigning(cert));
         }
 3. I Run-metoden, sett opp en serviceProvider:
@@ -90,6 +91,7 @@ ___
                     using (var httpClient = new HttpClient())
                     {
                         var response = await httpClient.SendAsync(signedRequestForRSA);
+                        logger?.LogInformation(signedRequestForRSA.ToString());
                         if (response.IsSuccessStatusCode)
                         {
                             logger?.LogInformation("{0} - GET request response: {1}", response.StatusCode, response.StatusCode);
@@ -105,4 +107,4 @@ ___
                 }
             }
 8. Kjør Run-metoden og sjekk request/respons i konsoll-loggen
-9. Prøv å lag og send en POST request og se hvordan Digest blir lagt til i headerne.
+9. Prøv å lag og send en POST request med body "some stuff" og se hvordan Digest blir lagt til i headerne.
