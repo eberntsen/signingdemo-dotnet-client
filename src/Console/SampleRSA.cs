@@ -63,7 +63,8 @@ namespace Console
             var request = new HttpRequestMessage
             {
                 RequestUri = new Uri("https://signingtest.azurewebsites.net/api/stuff"),
-                Method = HttpMethod.Get
+                Method = HttpMethod.Get,
+                Content = new StringContent("", Encoding.ASCII, "application/json")
             };
 
             var requestSigner = requestSignerFactory.CreateFor("signing-demo-v1");

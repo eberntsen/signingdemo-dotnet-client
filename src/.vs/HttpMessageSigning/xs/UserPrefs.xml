@@ -2,10 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.Samples.Console PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Console/SampleRSA.cs">
     <Files>
-      <File FileName="Console/SampleRSA.cs" Line="72" Column="1" />
-      <File FileName="HttpMessageSigning/SignatureAlgorithm.cs" Line="64" Column="28" />
-      <File FileName="HttpMessageSigning/ISignatureAlgorithm.cs" Line="8" Column="22" />
-      <File FileName="Console/Program.cs" Line="5" Column="56" />
+      <File FileName="Console/SampleRSA.cs" Line="52" Column="40" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,6 +13,13 @@
                 <Node name="SampleRSA.cs" selected="True" />
               </Node>
             </Node>
+            <Node name="Tests" expanded="True">
+              <Node name="HttpMessageSigning.Signing.Tests" expanded="True" />
+              <Node name="HttpMessageSigning.Tests" expanded="True" />
+              <Node name="HttpMessageSigning.Verification.AspNetCore.Tests" expanded="True" />
+              <Node name="HttpMessageSigning.Verification.MongoDb.Tests" expanded="True" />
+            </Node>
+            <Node name="HttpMessageSigning" expanded="True" />
             <Node name="HttpMessageSigning.Signing" expanded="True" />
           </Node>
         </State>
@@ -33,7 +37,14 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/RequestSigner.cs" relfile="HttpMessageSigning.Signing/RequestSigner.cs" line="61" column="1" />
+      <Breakpoint file="/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning.Signing/SignatureCreator.cs" relfile="HttpMessageSigning.Signing/SignatureCreator.cs" line="38" column="1" />
+      <Breakpoint file="/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning/RSASignatureAlgorithm.cs" relfile="HttpMessageSigning/RSASignatureAlgorithm.cs" line="44" column="1" />
+      <Breakpoint file="/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning/RSASignatureAlgorithm.cs" relfile="HttpMessageSigning/RSASignatureAlgorithm.cs" line="50" column="1" />
+      <Breakpoint file="/Users/eirikb/signingdemo-dotnet-client/src/HttpMessageSigning/RSASignatureAlgorithm.cs" relfile="HttpMessageSigning/RSASignatureAlgorithm.cs" line="53" column="1" />
+      <Breakpoint file="/Users/eirikb/signingdemo-dotnet-client/src/Console/SampleRSA.cs" relfile="Console/SampleRSA.cs" line="54" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

@@ -67,7 +67,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\HttpMessageSigning.TestUtils\HttpMessageSigning.TestUtils.csproj" />
         <ProjectReference Include="..\HttpMessageSigning.Verification.FileSystem\HttpMessageSigning.Verification.FileSystem.csproj" />
     </ItemGroup>
 
