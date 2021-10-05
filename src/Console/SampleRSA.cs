@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Mime;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,7 @@ namespace Console
                     using (var httpClient = new HttpClient())
                     {
                         var response = await httpClient.SendAsync(signedRequestForRSA);
+                        logger?.LogInformation(signedRequestForRSA.ToString());
                         if (response.IsSuccessStatusCode)
                         {
                             logger?.LogInformation("{0} - GET request response: {1}", response.StatusCode, response.StatusCode);
@@ -55,6 +57,7 @@ namespace Console
                 .AddLogging(configure => configure.AddConsole().SetMinimumLevel(LogLevel.Debug))
                 .AddHttpMessageSigning()
                 .UseKeyId("signing-demo-v1")
+                .UseDigestAlgorithm(HashAlgorithmName.SHA256)
                 .UseSignatureAlgorithm(SignatureAlgorithm.CreateForSigning(cert));
         }
 
@@ -64,7 +67,7 @@ namespace Console
             {
                 RequestUri = new Uri("https://signingtest.azurewebsites.net/api/stuff"),
                 Method = HttpMethod.Get,
-                Content = new StringContent("", Encoding.ASCII, "application/json")
+                Content = new StringContent("", Encoding.ASCII, "text/plain")
             };
 
             var requestSigner = requestSignerFactory.CreateFor("signing-demo-v1");
