@@ -13,6 +13,8 @@ For å få det til må vi:
 ___
 
 1. Ta utgangspunkt i SampleRSA-klassen i Console-prosjektet.
+
+
 2. Sett opp en metode for konfigurere nødvendige tjenester for signering. Last inn keystore som heter "signing_demo.p12". Passord er "pw":
       ```csharp
         public static void ConfigureServices(IServiceCollection services)
@@ -107,4 +109,9 @@ ___
                 }
             }
 8. Kjør Run-metoden og sjekk request/respons i konsoll-loggen
-9. Prøv å lag og send en POST request med body "some stuff" og se hvordan Digest blir lagt til i headerne.
+
+
+10. Prøv å lag og send en POST request med body "some stuff" og se hvordan Digest blir lagt til i headerne.
+
+
+10. APIet signerer også responsene du får - prøv å legg til verifisering av denne!
